@@ -1,5 +1,7 @@
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
+from blogapp.models import BlogPost
 
 # Create your views here.
 def home(request):
@@ -15,4 +17,7 @@ def about(request):
 
 
 def listblog(request):
-    return render(request, "bloglist.html")
+    blogdata = BlogPost.objects.all()
+    data = list(blogdata)
+    print(data[0])
+    return render(request, "bloglist.html", {'data': data})

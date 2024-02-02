@@ -20,20 +20,22 @@
         
               </div>
           <!-- Hamburger Icon -->
-        <button id="menu-btn"
-            class="block hamburger md:hidden focus:outline-none">
+        <button id="menu-btn" onclick="myFunction()" class="block hamburger md:hidden focus:outline-none">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
             <span class="hamburger-bottom"></span>
         </button>
-        </div>
           <!-- Mobile Menu -->
+          <div class="absolute top-16 right-2 hidden flex-col object-right navbar-dropdown border border-gray-200 border-spacing-4 w-28 text-center" id="menu">
+            <a class="m-2  hover:text-red-300" href="{% url 'home' %}">Home</a>
+            <a class="m-2  hover:text-red-300" href="{% url 'about' %}">About</a>
+            <a class="m-2  hover:text-red-300" href="{% url 'listblog' %}">Blog</a>
+        </div>
+        </div>
+
+
         <div class="md:hidden">
-            <div class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md" id="menu">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Category</a>
-            </div>
+            
         </div>
     </nav>
         <!-- Mobile Menu Ends -->
