@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django_tables2',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -148,3 +148,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "blogapp/static/")
 # COMPRESS_ENABLED = True
 
 # STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+
+
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
